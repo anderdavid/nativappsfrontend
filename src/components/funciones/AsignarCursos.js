@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EstudianteCursos(props) {
+function AsignarCurso(props) {
     return (
         <div>
             AsignarCurso
@@ -8,4 +8,4 @@ function EstudianteCursos(props) {
     );
 }
 
-export default EstudianteCursos;
+export default AsignarCurso;

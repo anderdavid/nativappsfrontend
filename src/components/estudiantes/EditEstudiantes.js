@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Top3(props) {
+function Edit(props) {
     return (
         <div>
-            Top3
+            Edit
         </div>
     );
 }
 
-export default Top3;
+export default Edit;
