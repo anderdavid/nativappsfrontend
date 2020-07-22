@@ -38,7 +38,7 @@ class ViewEstudiantes extends Component {
         return (
             <div>
                 {/* {JSON.stringify(this.props.state)} */}
-                <h1 className="title is-2">Ver estudiantes</h1>
+                <h1 className="title has-text-info">Ver estudiantes</h1>
                 <div className="table-container">
                     <table className="table is-striped is-fullwidth">
                         <thead>
