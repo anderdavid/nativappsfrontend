@@ -5,7 +5,14 @@ export const GET_ESTUDIANTES_ID='GET_ESTUDIANTES_ID'
 export const POST_ESTUDIANTES ='POST_ESTUDIANTES'
 export const PUT_ESTUDIANTES='PUT_ESTUDIANTES'
 export const DELETE_ESTUDIANTES ='DELETE_ESTUDIANTES'
+export const RESET_STATUS_ESTUDIANTES='RESET_STATUS_ESTUDIANTES'
 
+
+export const resetStatusEstudiantes =()=>{
+    return{
+        type:RESET_STATUS_ESTUDIANTES
+    }
+}
 
 export const getEstudiantes =()=>{
     console.log('getEstudiantes()')
@@ -114,6 +121,8 @@ export const putEstudiantes =(estudiante,id)=>{
                     msg: errorMsg
                 })
             }
+        ).then(
+            window.location.href="/estudiantes/ver/"+id
         )
 
     }

@@ -1,5 +1,5 @@
 import { GET_ESTUDIANTES, GET_ESTUDIANTES_ID, POST_ESTUDIANTES,
-        PUT_ESTUDIANTES,DELETE_ESTUDIANTES,
+        PUT_ESTUDIANTES,DELETE_ESTUDIANTES,RESET_STATUS_ESTUDIANTES
 } from './estudiantesAction'
 
 const initialState ={
@@ -10,6 +10,10 @@ const initialState ={
 
 const reducer =(state=initialState,action)=>{
     switch(action.type){
+        case RESET_STATUS_ESTUDIANTES:return{
+            ...state,
+            status:false
+        }
         case GET_ESTUDIANTES:
             return{
                 ...state,
