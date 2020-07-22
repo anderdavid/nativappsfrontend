@@ -119,8 +119,8 @@ export const putEstudiantes =(estudiante,id)=>{
     }
 }
 export const deleteEstudiantes=(id)=>{
-    console.log(deleteEstudiantes())
-    
+    console.log('deleteEstudiantes()')
+
     return(dispatch)=>{
         axios.delete('http://localhost:3002/estudiantes/'+id).then(
             response=>{
@@ -141,6 +141,8 @@ export const deleteEstudiantes=(id)=>{
                     msg: errorMsg
                 })
             }
+        ).then(
+            window.location.href="/estudiantes/ver/"
         )
 
     }
