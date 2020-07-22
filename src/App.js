@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect,useParams } from 'react-router-dom'
+import {Provider} from 'react-redux'
+import store from './redux/store'
 
 import CreateEstudiantes from './components/estudiantes/CreateEstudiantes'
 import EditEstudiantes from './components/estudiantes/EditEstudiantes'
@@ -20,7 +22,7 @@ import NavBar from './components/layout/NavBar'
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <NavBar/>
       <section className="section">
         <div className="container">
@@ -45,7 +47,7 @@ function App() {
             </BrowserRouter>
         </div>
       </section>
-    </div>
+    </Provider>
   );
 }
 
