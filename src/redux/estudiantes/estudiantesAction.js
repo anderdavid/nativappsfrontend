@@ -45,7 +45,7 @@ export const getEstudiantesId =(id)=>{
                 dispatch({
                     type:GET_ESTUDIANTES_ID,
                     status:response.data.status,
-                    estudiantes:response.data.estudiante,
+                    estudiante:response.data.estudiante,
                     msg:response.data.msg
                 })
             }
