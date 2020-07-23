@@ -8,7 +8,38 @@ class ViewIdEstudiantes extends Component {
 
     constructor(props) {
         super(props);
+        this.state={
+            modalActive:'',
+            modalMsg :'Esta seguro de eliminar este curso',
+            idEstudiante:''
+        }
+        this.openModal = this.openModal.bind(this)
+        this.closeModal=this.closeModal.bind(this)
         
+    }
+    openModal =(id)=>{
+        console.log('openModal() '+id)
+        this.setState(
+            {
+                ...this.state,
+                modalActive:'is-active',
+                idEstudiante:id
+            }
+        )
+    }
+    closeModal =()=>{
+        console.log('closeModal')
+        this.setState(
+            {
+                ...this.state,
+                modalActive:''
+            }
+        )
+    }
+    deleteEstudiante=()=>{
+        this.closeModal()
+        this.props.deleteEstudiante(this.state.idEstudiante)
+
     }
 
     componentWillMount=()=>{
@@ -37,6 +68,7 @@ class ViewIdEstudiantes extends Component {
         return (
             <div>
                 {/* <p>{JSON.stringify(this.props.state.estudiantesResponse.estudiantes[0])}</p> */}
+                <ViewModal active={this.state.modalActive} closeModal={this.closeModal} msg={this.state.modalMsg} delete={this.deleteEstudiante} />
                 <section className="hero">
                     <div className="hero-body has-background-light"> 
                         <div className="container">
@@ -50,7 +82,7 @@ class ViewIdEstudiantes extends Component {
                 <section className="container" style={{marginTop:"20px"}}>
                 <div class="buttons">
                             <button className="button is-info" onClick={()=>{window.location.href='/estudiantes/edit/'+estudiante.id}}>Editar</button>
-                            <button className="button is-danger" onClick={()=>{this.props.deleteEstudiante(estudiante.id)}}>Eliminar</button>
+                            <button className="button is-danger" onClick={()=>{this.openModal(estudiante.id)}}>Eliminar</button>
                         </div>
                 </section>
             </div>
@@ -74,3 +106,31 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(withRouter( ViewIdEstudiantes))
+
+
+        
+function ViewModal(props){
+
+    return(
+        
+        <div className= {`modal ${props.active}`}>
+            <div className="modal-background"></div>
+            <div className="modal-card">
+                <header className="modal-card-head">
+                    <p className="modal-card-title">Alerta</p>
+                    <button className="delete" aria-label="close" onClick={props.closeModal}></button>
+                </header>
+                <section className="modal-card-body">
+                    <p>{props.msg}</p>
+                </section>
+                <footer className="modal-card-foot">
+                    <button className="button is-success" onClick={props.delete}>Aceptar</button>
+                    <button className="button is-danger" onClick={props.closeModal}>Cancelar</button>
+                </footer>
+            </div>
+        </div>
+       
+    )
+    
+}
+   

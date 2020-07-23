@@ -58,7 +58,6 @@ class ViewEstudiantes extends Component {
                                     <div className="buttons">
                                         <button className="button is-success" onClick={()=>{window.location.href='/estudiantes/ver/'+estudiante.id}}>Ver</button>
                                         <button className="button is-info" onClick={()=>{window.location.href='/estudiantes/edit/'+estudiante.id}}>Editar</button>
-                                        {/* <button className="button is-danger" onClick={()=>{this.props.deleteEstudiante(estudiante.id)}}>Eliminar</button> */}
                                         <button className="button is-danger" onClick={()=>{this.openModal(estudiante.id)}}>Eliminar</button>
                                     </div>
                                 </td>
@@ -68,7 +67,7 @@ class ViewEstudiantes extends Component {
 
         return (
             <div>
-                <p>{JSON.stringify(this.state)}</p>
+                {/* <p>{JSON.stringify(this.state)}</p> */}
                 <ViewModal active={this.state.modalActive} closeModal={this.closeModal} msg={this.state.modalMsg} delete={this.deleteEstudiante} />
                 {/* {JSON.stringify(this.props.state)} */}
                 <h1 className="title has-text-info">Ver estudiantes</h1>
