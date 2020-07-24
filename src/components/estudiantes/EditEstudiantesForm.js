@@ -26,8 +26,8 @@ class EditEstudiantesForm extends Component {
     }
     send =(event)=>{
         event.preventDefault()
-        
-        this.props.putEstudiantes(this.state,this.props.estudianteId)
+       
+       this.props.putEstudiantes(this.state,this.props.estudianteId)
     }
     render() {
         return (

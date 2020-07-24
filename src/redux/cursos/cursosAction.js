@@ -61,7 +61,7 @@ export const postCursos =(curso)=>{
 
 export const putCursos =(curso,id) =>{
 
-    console.log('curso '+ JSON.stringify(curso))
+    console.log('curso '+ JSON.stringify(curso)+'id '+id)
   
     return(dispatch)=>{
       axios.put('http://localhost:3002/cursos/'+id,curso).then(
