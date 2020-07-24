@@ -7,7 +7,7 @@ class ViewEstudiantes extends Component {
         super(props);
         this.state={
             modalActive:'',
-            modalMsg :'Esta seguro de eliminar este curso',
+            modalMsg :'Esta seguro de eliminar este Estudiante',
             idEstudiante:''
         }
         this.openModal = this.openModal.bind(this)
