@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export const ASIGNAR_CURSO ='ASIGNAR_CURSO'
 export const GET_ESTUDIANTE_CURSO='GET_ESTUDIANTE_CURSO'
+export const TOP_3 ='TOP_3'
 
 export const asignarCurso =(asignacion)=>{
     console.log('asignarCurso()')
@@ -52,6 +53,33 @@ export const getEstudianteCursos =(id)=>{
                 console.log(errorMsg)
                 dispatch({
                     type:GET_ESTUDIANTE_CURSO,
+                    status:false, 
+                    msg: errorMsg
+                })
+            }
+        )
+    }
+}
+
+export const top3 =()=>{
+    console.log('top3')
+    return(dispatch)=>{
+        axios.get('http://localhost:3002/top3').then(
+            response=>{
+                console.log(response.data)
+                dispatch({
+                    type:TOP_3,
+                    status:response.data.status,
+                    msg:response.data.msg,
+                    top3:response.data.top3
+                })
+            }
+        ).catch(
+            error =>{
+                const errorMsg =error.message
+                console.log(errorMsg)
+                dispatch({
+                    type:TOP_3,
                     status:false, 
                     msg: errorMsg
                 })
