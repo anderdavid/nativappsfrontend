@@ -59,7 +59,7 @@ class ViewCursos extends Component {
                     <td>{curso.horario}</td>
                     <td>{curso.fecha_inicio}</td>
                     <td>{curso.fecha_fin}</td>
-                    <td>{curso.numero_estudiantes}</td>
+                    <td>{curso.num_estudiantes}</td>
                     <td>
                         <div className="buttons">
                             <button className="button is-success" onClick={()=>{window.location.href='/cursos/ver/'+curso.id}}>Ver</button>
