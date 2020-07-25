@@ -8,7 +8,7 @@ export const asignarCurso =(asignacion)=>{
     console.log('asignarCurso()')
     
     return(dispatch)=>{
-        axios.post('http://localhost:3002/asignacion',asignacion).then(
+        axios.post('https://nativeappsbackend.herokuapp.com/asignacion',asignacion).then(
             response=>{
                 console.log(response.data)
                 dispatch({
@@ -36,7 +36,7 @@ export const asignarCurso =(asignacion)=>{
 
 export const getEstudianteCursos =(id)=>{
     return(dispatch)=>{
-        axios.get('http://localhost:3002/estudianteCurso/'+id).then(
+        axios.get('https://nativeappsbackend.herokuapp.com/estudianteCurso/'+id).then(
             response=>{
                 console.log(response.data)
                 dispatch({
@@ -64,7 +64,7 @@ export const getEstudianteCursos =(id)=>{
 export const top3 =()=>{
     console.log('top3')
     return(dispatch)=>{
-        axios.get('http://localhost:3002/top3').then(
+        axios.get('https://nativeappsbackend.herokuapp.com/top3').then(
             response=>{
                 console.log(response.data)
                 dispatch({
