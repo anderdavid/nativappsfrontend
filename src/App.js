@@ -40,7 +40,7 @@ function App() {
                   <Route path="/cursos/edit/:id" children={<EditCursos/>} />
 
                   <Route exact path="/funciones/asignarcursos" children={<AsignarCursos/>} />
-                  <Route exact path="/funciones/estudiantecurso" children={<EstudianteCursos/>} />
+                  <Route exact path="/funciones/estudiantecurso/:idEstudiante" children={<EstudianteCursos/>} />
                   <Route exact path="/funciones/top3" children={<Top3/>} />
                 </Switch>
             

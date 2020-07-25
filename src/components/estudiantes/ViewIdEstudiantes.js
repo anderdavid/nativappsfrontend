@@ -82,6 +82,7 @@ class ViewIdEstudiantes extends Component {
                 <section className="container" style={{marginTop:"20px"}}>
                 <div class="buttons">
                             <button className="button is-info" onClick={()=>{window.location.href='/estudiantes/edit/'+estudiante.id}}>Editar</button>
+                            <button className="button is-primary" onClick={()=>{window.location.href='/funciones/estudiantecurso/'+estudiante.id}}>Ver Cursos</button>
                             <button className="button is-danger" onClick={()=>{this.openModal(estudiante.id)}}>Eliminar</button>
                         </div>
                 </section>

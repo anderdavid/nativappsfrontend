@@ -1,8 +1,8 @@
-import {ASIGNAR_CURSO} from './funcionesAction'
+import {ASIGNAR_CURSO,GET_ESTUDIANTE_CURSO} from './funcionesAction'
 
 const initialState ={
     status:false,
-    asignaciones:[],
+    estudianteCursos:[],
     msg:''
 }
 
@@ -12,6 +12,13 @@ const reducer =(state=initialState,action)=>{
             return{
                 ...state,
                 status:action.status,
+                msg:action.msg 
+            }
+        case GET_ESTUDIANTE_CURSO:
+            return{
+                ...state,
+                status:action.status,
+                estudianteCursos:action.estudianteCursos,
                 msg:action.msg 
             }
         default:

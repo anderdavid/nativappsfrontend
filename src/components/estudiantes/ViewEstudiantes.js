@@ -57,6 +57,7 @@ class ViewEstudiantes extends Component {
                                 <td>
                                     <div className="buttons">
                                         <button className="button is-success" onClick={()=>{window.location.href='/estudiantes/ver/'+estudiante.id}}>Ver</button>
+                                        <button className="button is-primary" onClick={()=>{window.location.href='/funciones/estudiantecurso/'+estudiante.id}}>Ver Cursos</button>
                                         <button className="button is-info" onClick={()=>{window.location.href='/estudiantes/edit/'+estudiante.id}}>Editar</button>
                                         <button className="button is-danger" onClick={()=>{this.openModal(estudiante.id)}}>Eliminar</button>
                                     </div>

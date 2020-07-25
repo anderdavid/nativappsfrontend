@@ -24,7 +24,7 @@ class AsignarCursos extends Component {
         if(statusCursos && statusEstudiantes){
             this.content =<AsignarCursosForm cursos={this.props.state.cursosResponse.cursos} estudiantes={this.props.state.estudiantesResponse.estudiantes}/>
         }else{
-            this.content=<p>Error</p>
+            this.content=<p>No hay Estudiantes o Cursos para asignar</p>
         }
 
         return (
