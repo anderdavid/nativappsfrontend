@@ -89,7 +89,8 @@ export const deleteCursos =(id)=>{
        response=>{
          console.log(response.data)
          dispatch({type:DELETE_CURSOS, status:response.data.status,msg:response.data.msg});
-       }
+         window.location.href="/cursos/ver"
+        }
       ).catch(
         error=>{
           const errorMsg =error.message
@@ -97,7 +98,7 @@ export const deleteCursos =(id)=>{
           dispatch({type:DELETE_CURSOS, status:false, msg: errorMsg})
         }
       ).then(
-        window.location.href="/cursos/ver"
+       
       )
     }
 }

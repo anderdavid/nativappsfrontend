@@ -140,6 +140,7 @@ export const deleteEstudiantes=(id)=>{
                     status:response.data.status,
                     msg:response.data.msg
                 })
+                window.location.href="/estudiantes/ver/"
             }
         ).catch(
             error=>{
@@ -152,7 +153,7 @@ export const deleteEstudiantes=(id)=>{
                 })
             }
         ).then(
-            window.location.href="/estudiantes/ver/"
+           
         )
 
     }
