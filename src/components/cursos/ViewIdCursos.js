@@ -63,7 +63,7 @@ class ViewIdCursos extends Component {
                             <p><strong className="has-text-danger-dark">Horario: </strong>{curso.horario}</p>
                             <p><strong className="has-text-danger-dark">Fecha de Inicio: </strong>{curso.fecha_inicio}</p>
                             <p><strong className="has-text-danger-dark">Fecha de Fin: </strong>{curso.fecha_fin}</p>
-                            <p><strong className="has-text-danger-dark">Numero de Estudiantes: </strong>{curso.numero_estudiantes}</p>
+                            <p><strong className="has-text-danger-dark">Numero de Estudiantes: </strong>{curso.num_estudiantes}</p>
                         </div>
         }
         return (

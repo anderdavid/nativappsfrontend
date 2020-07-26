@@ -17,6 +17,7 @@ export const asignarCurso =(asignacion)=>{
                     msg:response.data.msg
 
                 })
+                window.location.href="/estudiantes/ver/"
             }
         ).catch(
             error=>{
@@ -29,7 +30,7 @@ export const asignarCurso =(asignacion)=>{
                 })
             }
         ).then(
-            window.location.href="/estudiantes/ver/"
+            
         )
     }
 }
