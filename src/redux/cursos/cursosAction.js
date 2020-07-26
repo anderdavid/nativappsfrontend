@@ -68,6 +68,7 @@ export const putCursos =(curso,id) =>{
         response=>{
           console.log(response.data)
           dispatch({type:UPDATE_CURSOS, status:response.data.status, msg:response.data.msg});
+          window.location.href="/cursos/ver/"+id
         }
         
       ).catch(
@@ -77,7 +78,7 @@ export const putCursos =(curso,id) =>{
           dispatch({type:UPDATE_CURSOS, status:false, msg: errorMsg})
         }
       ).then(
-        window.location.href="/cursos/ver/"+id
+       
       )
     }
   }

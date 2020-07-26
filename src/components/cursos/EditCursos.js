@@ -23,7 +23,7 @@ class EditCursos extends Component {
     
         if(!status){
             var msg = this.props.state.cursosResponse.msg
-            this.content=<div>Estudiante no encontrado</div>
+            this.content=<div>Curso no encontrado</div>
         }else{
             this.content=<EditCursosForm curso={this.props.state.cursosResponse.cursos[0]} cursoId={this.props.match.params.id}/>
         }

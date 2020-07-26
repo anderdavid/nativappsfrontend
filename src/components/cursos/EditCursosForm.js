@@ -72,7 +72,7 @@ class EditCursosForm extends Component {
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <input type="submit" name="Guardar" className="button is-info"/>
+                                    <input type="submit" value="Actualizar" className="button is-info"/>
                                 </div>
 
                         </form>

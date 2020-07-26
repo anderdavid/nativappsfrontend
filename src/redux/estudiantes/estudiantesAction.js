@@ -110,6 +110,7 @@ export const putEstudiantes =(estudiante,id)=>{
                     status:response.data.status,
                     msg:response.data.msg
                 })
+                window.location.href="/estudiantes/ver/"+id
             }
         ).catch(
             error=>{
@@ -122,7 +123,7 @@ export const putEstudiantes =(estudiante,id)=>{
                 })
             }
         ).then(
-            window.location.href="/estudiantes/ver/"+id
+          
         )
 
     }
