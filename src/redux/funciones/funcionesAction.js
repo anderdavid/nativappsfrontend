@@ -17,7 +17,7 @@ export const asignarCurso =(asignacion)=>{
                     msg:response.data.msg
 
                 })
-                window.location.href="/estudiantes/ver/"
+                window.location.href="/cursos/ver"
             }
         ).catch(
             error=>{
