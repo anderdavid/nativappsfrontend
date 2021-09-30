@@ -8,7 +8,7 @@ class ViewIdCursos extends Component {
     super(props);
     this.state = {
       modalActive: '',
-      modalMsg: 'Esta seguro borrar este curso',
+      modalMsg: 'Esta seguro eliminar este curso',
       idCurso: ''
     };
     this.openModal = this.openModal.bind(this);
