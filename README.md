@@ -1,7 +1,7 @@
 ## Presentación prueba técnica NativApps REACT-NODE.JS
 
 - Ver aplicación en servidor compartido (heroku):
-	 Backend: https://nativeappsbackend.herokuapp.com/
+	 Backend: http://localhost:3002/
    FrontEnd: https://nativappsfrontend.herokuapp.com/
     
         

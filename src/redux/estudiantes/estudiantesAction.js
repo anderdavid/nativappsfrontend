@@ -17,7 +17,7 @@ export const resetStatusEstudiantes =()=>{
 export const getEstudiantes =()=>{
     console.log('getEstudiantes()')
     return(dispatch)=>{
-        axios.get('https://nativeappsbackend.herokuapp.com/estudiantes').then(
+        axios.get('http://localhost:3002/estudiantes').then(
             response=>{
                 console.log(response.data)
                 dispatch({
@@ -46,7 +46,7 @@ export const getEstudiantesId =(id)=>{
     console.log('getEstudiantesId()')
 
     return(dispatch)=>{
-        axios.get('https://nativeappsbackend.herokuapp.com/estudiantes/'+id).then(
+        axios.get('http://localhost:3002/estudiantes/'+id).then(
             response=>{
                 console.log(response.data)
                 dispatch({
@@ -75,7 +75,7 @@ export const postEstudiantes =(estudiante)=>{
     console.log('postEstudiantes()')
 
     return(dispatch)=>{
-        axios.post('https://nativeappsbackend.herokuapp.com/estudiantes',estudiante).then(
+        axios.post('http://localhost:3002/estudiantes',estudiante).then(
             response=>{
                 console.log(response.data)
                 dispatch({
@@ -102,7 +102,7 @@ export const putEstudiantes =(estudiante,id)=>{
     console.log('putEstudiantes()')
 
     return(dispatch)=>{
-        axios.put('https://nativeappsbackend.herokuapp.com/estudiantes/'+id,estudiante).then(
+        axios.put('http://localhost:3002/estudiantes/'+id,estudiante).then(
             response=>{
                 console.log(response.data)
                 dispatch({
@@ -132,7 +132,7 @@ export const deleteEstudiantes=(id)=>{
     console.log('deleteEstudiantes()')
 
     return(dispatch)=>{
-        axios.delete('https://nativeappsbackend.herokuapp.com/estudiantes/'+id).then(
+        axios.delete('http://localhost:3002/estudiantes/'+id).then(
             response=>{
                 console.log(response.data)
                 dispatch({
